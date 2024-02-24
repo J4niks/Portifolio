@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --corDeFundo: #101010;
+    --corPrimaria: #ff0048;
+    --corSecundaria:#fafafaec;
+    --transparente: rgba(255, 255, 255, 0.055);
+    --textColor: white;
+    --textoSecundario: rgb(0, 0, 0);
+    --fontePrimaria: "Anta", sans-serif;
+    --fonteSecundaria: "Montserrat", sans-serif;
+    --filtroCorPrimaria: invert(19%) sepia(84%) saturate(5765%) hue-rotate(335deg) brightness(94%) contrast(115%);
+
+
+}
+.lightMode{
+    --corDeFundo: #dadada;
+    --corPrimaria: #ff0048;
+    --corSecundaria:rgba(255, 255, 255, 0.582);
+    --transparente: rgba(255, 255, 255, 0.582);
+    --textColor: rgb(26, 26, 26);
+    --textoSecundario: rgb(0, 0, 0);
+}
+html, body {
+    height: 100%;
+}
+
+body{
+    background-color: var(--corDeFundo);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--transparente);
+}
+header nav {
+    display: flex;
+    gap: 3vw;
+    margin-left: 1vw;
+    font-size: 1.5rem;
+}
+.navLinks{
+    color: var(--textColor)
+}
+.navLinks:hover{
+    color: var(--corPrimaria);
+    text-shadow: 1px 1px 10px var(--corPrimaria);
+}
+.colorMode{
+    margin-right: 1vw;
+}
+
+main{
+    height: fit-content;
+    width: 100%;
+}
+
+.animation {
+    margin-top: 15vh;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 5.6vw;
+    position: absolute;
+}
+.line{
+    height: 5px;
+    width: 1px;
+    box-shadow: 1px 1px 10px 1px var(--corPrimaria);
+    background-color: var(--corPrimaria);
+    position: relative;
+    animation: dropLines linear infinite;
+    animation-duration: calc(50s/ var(--p));
+}
+
+#presentation{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+.mainPresentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainText{
+    color: var(--textColor);
+    font-size: 2rem;
+}
+.myName {
+    color: var(--textColor);
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--fontePrimaria);
+}
+.mainText span {
+    color: var(--corPrimaria);
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 10px var(--corPrimaria);
+    font-family: var(--fontePrimaria);
+}
+.myPic{
+    height: 25rem;
+    border: 3px solid var(--corPrimaria);
+    border-radius: 50%;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--corSecundaria);
+    margin-top: 10vh;
+    width: 100%;
+    height: 100vh;
+}
+.about{
+    margin-top: 3%;
+    font-size: 2rem;
+    color: var(--textoSecundario);
+    font-weight: 600;
+    text-align: center;
+    font-family:var(--fontePrimaria);
+}
+.about::after{
+    content: '';
+    display: block;
+    background: var(--corPrimaria);
+    width: 200px;
+    height: 5px;
+    border-radius: 1rem;
+}
+.aboutDiv{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.aboutText{
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10vh;
+    font-size: 1.3rem;
+    font-family: var(--fonteSecundaria);
+    font-weight: 600;
+}
+.aboutText h3{
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--fontePrimaria);
+    font-weight: 600;
+}
+.aboutTextHighlight{
+    color: var(--corPrimaria)
+}
+.aboutTextButton{
+    background-color: var(--corPrimaria);
+    padding: 1rem;
+    color: var(--textColor) ;
+}
+
+
+.aboutDivIcons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr;
+    grid-template-areas: 
+    'title title title'
+    'fistItem secondItem thirdItem'
+    'fourthItem fifthItem sixthItem'
+    'seventhItem eighthItem ninthItem'
+    ;
+    width: 50%;
+    justify-items: center;
+}
+.aboutIcons{
+    width: 100px;
+    padding-top: 8vh;
+}
+.aboutDivIcons h3 {
+    grid-area: title;
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--fontePrimaria);
+    font-weight: 600;
+}
+
+.aboutIcons:nth-child(1){grid-area: fifthItem;}
+.aboutIcons:nth-child(2){grid-area: thirdItem;}
+.aboutIcons:nth-child(3){grid-area: fistItem;}
+.aboutIcons:nth-child(4){grid-area: secondItem;}
+.aboutIcons:nth-child(5){grid-area: fourthItem;}
+
+.aboutIcons:hover{
+    filter:var(--filtroCorPrimaria);
+}
+#projects {
+    background-color: red;
+    width: 100%;
+    height: 90vh;
+}
+
+::-webkit-scrollbar{
+    width: 0.8vw;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(rgba(255, 0, 0, 0));
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--corPrimaria);
+    border-radius: 1vw;
+}
+
+@keyframes dropLines{
+    0%{
+        top: 0%;
+        opacity: 0;
+    };
+    10%{
+        opacity: 0.5;
+    }
+    20%{
+        opacity: 1;
+    }
+    50%{
+        top: 50%;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        top: 100%;
+        opacity: 0;
+    };
+}
