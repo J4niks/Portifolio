@@ -4,9 +4,11 @@ function swapColor(){
     if(check === true){
         body.classList.remove('lightMode')
         localStorage.setItem('theme', 'false')
+        document.getElementById('colorModeImg').setAttribute('src', './assets/svg/sun_ico.svg')
     }else{
         body.classList.add('lightMode')
         localStorage.setItem('theme', 'true')
+        document.getElementById('colorModeImg').setAttribute('src', './assets/svg/moon_ico.svg')
     }
 }
 
