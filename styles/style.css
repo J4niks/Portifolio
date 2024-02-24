@@ -2,19 +2,19 @@
 
 :root{
     --corDeFundo: #101010;
-    --corPrimaria: #ff0048;
+    --corPrimaria: #1100ff;
     --corSecundaria:#fafafaec;
     --transparente: rgba(255, 255, 255, 0.055);
     --textColor: white;
     --textoSecundario: rgb(0, 0, 0);
-    --fontePrimaria: "Anta", sans-serif;
+    --fontePrimaria: "Anta", sans-serif;    
     --fonteSecundaria: "Montserrat", sans-serif;
-    --filtroCorPrimaria: invert(19%) sepia(84%) saturate(5765%) hue-rotate(335deg) brightness(94%) contrast(115%);
-    --hoverColor:#b60638;
+    --filtroCorPrimaria: invert(10%) sepia(99%) saturate(7358%) hue-rotate(252deg) brightness(86%) contrast(140%);
+
 }
 .lightMode{
     --corDeFundo: #dadada;
-    --corPrimaria: #ff0048;
+    --corPrimaria: #1100ff;
     --corSecundaria:rgba(255, 255, 255, 0.582);
     --transparente: rgba(255, 255, 255, 0.582);
     --textColor: rgb(26, 26, 26);
@@ -94,6 +94,14 @@ main{
     align-items: center;
     justify-content: center;
     gap: 5vw;
+}
+#about::before{
+    content: '';
+    display: block;
+    background-color: var(--corPrimaria);
+    height: 5px;
+    width: 80%;
+    border-radius: 10px;
 }
 .mainPresentation{
     display: flex;
@@ -224,14 +232,34 @@ main{
     filter:var(--filtroCorPrimaria);
 }
 #projects {
+    display: flex;
+    justify-content: center;
     background-color: var(--corDeFundo);
     width: 100%;
     height: 100vh;
 }
+#projects::before{
+    content: '';
+    display: block;
+    background-color: var(--corPrimaria);
+    height: 5px;
+    width: 80%;
+    border-radius: 10px;
+}
 #social{
+    display: flex;
+    justify-content: center;
     background-color: var(--corSecundaria);
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+}
+#social::before{
+    content: '';
+    display: block;
+    background-color: var(--corPrimaria);
+    height: 5px;
+    width: 80%;
+    border-radius: 10px;
 }
 footer {
     display: flex;
