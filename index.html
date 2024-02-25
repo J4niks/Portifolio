@@ -9,7 +9,15 @@
 </head>
 <body>
     <header id="start">
-        <nav>
+        <input class="startMenuInput" id="startMenu" type="checkbox">
+        <label class="startMenuLabel" for="startMenu">
+            <div class="MenuLabelDiv">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <nav class="navStart">
             <a href="#start" class="navLinks">Início</a>
             <a href="#about" class="navLinks">Sobre mim</a>
             <a href="#projects" class="navLinks">Projetos</a>
@@ -44,6 +52,7 @@
                 <span class="line" style="--p:20;"></span>
                 <span class="line" style="--p:14;"></span>
                 <span class="line" style="--p:10;"></span>
+                
             </div>
         </section> 
         <section id="about">
@@ -73,6 +82,12 @@
                 <h3>Entre em Contato</h3>
                 <p>Achou algo interessante? fique avontade para entrar em contato nas minhas redes sociais ou me mandar um email</p>
             </div>
+            <div class="socialLinks">
+                <a href="https://linkedin.com/in/janiksoliveira/" target="_blank"><img src="./assets/svg/linkedin_icon.svg" class="socialLinksImg" alt="LinkedIn logo"></a>
+                <a href="https://github.com/J4niks" target="_blank"><img src="./assets/svg/github_icon.svg" class="socialLinksImg" alt="GitHub logo"></a>
+                <a href="https://www.instagram.com/janiksoliveira/" target="_blank"><img src="./assets/svg/instagram_icon.svg" class="socialLinksImg" alt="Instagram logo"></a>
+                <a href="https://linktr.ee/janiksoliveira" target="_blank"><img src="./assets/svg/linktree_icon.svg" class="socialLinksImg" alt="Linktree logo"></a>
+            </div>
             <form>
                 <div class="formDiv">
                     <div class="formField">
@@ -87,19 +102,13 @@
                         <label for="formSubject">Assunto</label>
                         <input id="formSubject" type="text" placeholder="Digite o Assunto">
                     </div>
-                    <div class="formField">
+                    <div class="formField formFieldMessage">
                         <label for="formMessage">Mensagem</label>
                         <input id="formMessage" type="text" placeholder="Digite sua mensagem">
                     </div>
                 </div>
                 <input id="formButton" type="button" value="Enviar">
             </form>
-            <div class="socialLinks">
-                <a href="https://linkedin.com/in/janiksoliveira/" target="_blank"><img src="./assets/svg/linkedin_icon.svg" class="socialLinksImg" alt="LinkedIn logo"></a>
-                <a href="https://github.com/J4niks" target="_blank"><img src="./assets/svg/github_icon.svg" class="socialLinksImg" alt="GitHub logo"></a>
-                <a href="https://www.instagram.com/janiksoliveira/" target="_blank"><img src="./assets/svg/instagram_icon.svg" class="socialLinksImg" alt="Instagram logo"></a>
-                <a href="https://linktr.ee/janiksoliveira" target="_blank"><img src="./assets/svg/linktree_icon.svg" class="socialLinksImg" alt="Linktree logo"></a>
-            </div>
         </section>
     </main>
     <footer>

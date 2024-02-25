@@ -9,7 +9,7 @@
     --textoSecundario: rgb(0, 0, 0);
     --fontePrimaria: "Anta", sans-serif;    
     --fonteSecundaria: "Montserrat", sans-serif;
-    --filtroCorPrimaria: invert(10%) sepia(99%) saturate(7358%) hue-rotate(252deg) brightness(86%) contrast(140%);
+    --filtroCorPrimaria: invert(24%) sepia(94%) saturate(7427%) hue-rotate(332deg) brightness(103%) contrast(108%);
 
 }
 .lightMode{
@@ -33,6 +33,12 @@ header{
     width: 100%;
     height: 10vh;
     background-color: var(--transparente);
+}
+.startMenuInput{
+    display: none;
+}
+.startMenuLabel{
+    display: none;
 }
 header nav {
     display: flex;
@@ -59,6 +65,7 @@ header nav {
     border-radius: 50%;
     background-color: var(--corPrimaria);
     border: none;
+    cursor: pointer;
 }
 .colorMode:hover{
     box-shadow: 1px 1px 10px 4px var(--corPrimaria);
@@ -76,6 +83,7 @@ main{
     overflow: hidden;
     gap: 5.6vw;
     position: absolute;
+    justify-content: space-between;
 }
 .line{
     height: 5px;
@@ -88,7 +96,7 @@ main{
 }
 
 #presentation{
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +134,7 @@ main{
     font-family: var(--fontePrimaria);
 }
 .myPic{
-    height: 25rem;
+    height: 80%;
     border: 3px solid var(--corPrimaria);
     border-radius: 50%;
 }
@@ -138,7 +146,7 @@ main{
     background-color: var(--corSecundaria);
     margin-top: 10vh;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 .about{
     margin-top: 3%;
@@ -298,47 +306,57 @@ main{
     width: 40%;
     height: 80%;
     align-items: center;
+    margin-bottom: 5vh;
 }
 .formDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4vh;
+    gap: 3%;
     width: 100%;
-    height: fit-content;
+    height: 90%;
     margin-top: 2vh;
+    margin-bottom: 5%;
 }
 .formField{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 80%;
-    height: 10%;
+    height: 20%;
+}
+.formFieldMessage{
+    height: 60%;
 }
 .formField label{
     display: block;
     color: var(--textColor);
+    font-size: 1rem;
+    font-weight: 550;
 }
 #formName{
-    height: 40px;
+    height: 100%;
     width: 100%;
     border-radius: 0.5rem;
     border: none;
     outline: none;
 }
 #formEmail{
-    height: 40px;
+    height: 100%;
     width: 100%;
     border-radius: 0.5rem;
     border: none;
     outline: none;
 }
 #formSubject{
-    height: 40px;
+    height: 100%;
     width: 100%;
     border-radius: 0.5rem;
     border: none;
     outline: none;
 }
 #formMessage{
-    height: 100px;
+    height: 100%;
     width: 100%;
     border-radius: 0.5rem;
     border: none;
@@ -349,8 +367,8 @@ main{
     width: 20%;
     height: 10%;
     background-color: var(--corPrimaria);
-    margin-top: -1rem;
     border-radius: 1rem;
+    margin-bottom: 5%;
 }
 #formButton:hover{
     box-shadow: 1px 1px 10px 5px var(--corPrimaria);
@@ -360,22 +378,23 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 70px;
+    width: 5%;
     height: 50%;
     left: 0px;
-    margin-top: 20vh;
+    margin-top: 25vh;
     background-color: var(--corSecundaria);
-    gap: 6%;
+    gap: 8%;
     box-shadow: 1px 1px 10px 1px var(--corPrimaria);
+    padding: 5px;
 }
 .socialLinksImg{
-    margin-top: 1vh;
     border-radius: 30%;
     width: 90%;
 }
 .socialLinksImg:hover{
-    width: 60px;
+    width: 100%;
     box-shadow: 1px 1px 10px 1px var(--corPrimaria);
 }
 
@@ -386,6 +405,7 @@ footer {
     height: 10vh;
     background-color: var(--corDeFundo);
     color: var(--corPrimaria);
+    font-weight: 800;
 }
 footer a {
     position: fixed;
@@ -422,7 +442,7 @@ footer a:hover{
         opacity: 0;
     };
     10%{
-        opacity: 0.5;
+        opacity: 0.8;
     }
     20%{
         opacity: 1;
@@ -440,4 +460,116 @@ footer a:hover{
         top: 100%;
         opacity: 0;
     };
+}
+
+@media screen and (width<700px){
+    header{
+        align-items: normal;
+    }
+    header nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 10vh;
+        margin-left: 0px;
+        padding: 10%;
+        gap: 15%;
+        background-color: var(--corPrimaria);
+        width: 45vw;
+        height: 60vh;
+        border-radius: 0% 0% 30% 0%;
+        font-weight: 700;
+    }
+    .startMenuLabel{
+        display: initial;
+        margin-left: 2vw;
+        align-self: center;
+    }
+    .MenuLabelDiv{
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 50px;
+        gap: 5%;
+        align-self: center;
+        justify-content: center;
+    }
+    .MenuLabelDiv span{
+        width: 80%;
+        height: 15%;
+        border-radius: 20px;
+        background-color: var(--corPrimaria);
+    }
+
+    .colorMode{
+        align-self: center;
+    }
+    .startMenuInput:checked ~ .navStart{
+        display: flex;
+    }
+    .navLinks{
+        font-size: 1rem;
+    }
+
+
+    #presentation{
+        flex-direction: column-reverse;
+    }
+    .myPic{
+        height: 40vh;
+    }
+    #about{
+        height: fit-content;
+    }
+    .aboutDiv{
+        align-items: center;
+        flex-direction: column;
+    }
+    .aboutText{
+        width: 100%;
+    }
+    .aboutDivIcons{
+        width: 100%;
+    }
+
+
+    #social{
+        height: fit-content;
+    }
+    .mainSocial p{
+        margin: 1rem;
+    }
+    .socialLinks{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+        width: 80%;
+        height: 10vh;
+    }
+    .socialLinksImg:hover{
+        width: 100%;
+    }
+    #social form{
+        width: 80%;
+        height: 70vh;
+        gap: 0px;
+        margin-bottom: 5vh;
+    }
+
+    
+    footer{
+        padding-left: 20%;
+    }
+}
+
+@media screen and (width<400px){
+    .colorMode{
+        width: 35px;
+        height: 35px;
+    }
+    #colorModeImg{
+        height: 70%;
+    }
 }
