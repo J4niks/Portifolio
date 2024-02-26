@@ -2,7 +2,7 @@
 
 :root{
     --corDeFundo: #101010;
-    --corPrimaria: #ff0060;
+    --corPrimaria: #ff0048;
     --corSecundaria:#fafafaec;
     --transparente: rgba(255, 255, 255, 0.055);
     --textColor: white;
@@ -45,7 +45,7 @@ header nav {
     gap: 2vw;
     margin-left: 1vw;
     font-size: 1.5rem;
-    font-family: var(--fonteSecundaria);
+    font-family: var(--fontePrimaria);
     font-weight: 600;
 }
 .navLinks{
