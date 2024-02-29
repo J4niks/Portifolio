@@ -368,6 +368,8 @@ main{
     background-color: var(--corPrimaria);
     border-radius: 1rem;
     margin-bottom: 5%;
+    font-family: var(--fonteSecundaria);
+    font-weight: 600;
 }
 #formButton:hover{
     box-shadow: 1px 1px 10px 5px var(--corPrimaria);
