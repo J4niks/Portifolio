@@ -69,7 +69,6 @@
                     <img class="aboutIcons" src="./assets/svg/javascript_logo.svg" alt="Logo Javascript">
                     <img class="aboutIcons" src="./assets/svg/HTML5_logo.svg" alt="Logo HTML5">
                     <img class="aboutIcons" src="./assets/svg/CSS_logo.svg" alt="Logo CSS">
-                    <img class="aboutIcons" src="./assets/svg/nodejs_logo.svg" alt="Logo NodeJs">
                     <img class="aboutIcons" src="./assets/svg/java_logo.svg" alt="Logo Java">
                 </div>
             </div>
@@ -89,7 +88,7 @@
                 <a href="https://www.instagram.com/janiksoliveira/" target="_blank"><img src="./assets/svg/instagram_icon.svg" class="socialLinksImg" alt="Instagram logo"></a>
                 <a href="https://linktr.ee/janiksoliveira" target="_blank"><img src="./assets/svg/linktree_icon.svg" class="socialLinksImg" alt="Linktree logo"></a>
             </div>
-            <form>
+            <form id="mailSend" action="http://www.foo.com" method="POST">
                 <div class="formDiv">
                     <div class="formField">
                         <label for="formName">Nome</label>
@@ -99,16 +98,12 @@
                         <label for="formEmail">Email</label>
                         <input id="formEmail" type="text" placeholder="Digite seu email">
                     </div>
-                    <div class="formField">
-                        <label for="formSubject">Assunto</label>
-                        <input id="formSubject" type="text" placeholder="Digite o Assunto">
-                    </div>
                     <div class="formField formFieldMessage">
                         <label for="formMessage">Mensagem</label>
                         <input id="formMessage" type="text" placeholder="Digite sua mensagem">
                     </div>
                 </div>
-                <input id="formButton" type="button" value="Enviar">
+                <button id="formButton" type="submit">Enviar</input>
             </form>
         </section>
     </main>
@@ -117,5 +112,6 @@
         <a href="#start"><img src="./assets/svg/arrowUp.svg"></a>
     </footer>
     <script src="./scripts/theme.js"></script>
+    <script src="./scripts/form-send.js"></script>
 </body>
 </html>
